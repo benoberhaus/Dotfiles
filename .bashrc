@@ -65,10 +65,14 @@ fi
 
 # Go Path
 export PATH=$PATH:/usr/local/go/bin
-
+export GOPATH=~/go
+export GO15VENDOREXPERIMENT=1
 # Custom Prompt
 source ~/.git-prompt.sh
 if [[ "$TERM" =~ 256color ]]; then
         PS1="\[\e[0;91m\]\u\[\e[m\]\[\e[0;92m\]@\[\e[m\]\[\e[0;91m\]\h\[\e[m\] \[\e[0;92m\]\w\[\e[m\]\[\e[0;97m\]\$(__git_ps1) \[\e[0;91m\]$\[\e[m\] "
 fi
-
+# Python virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
