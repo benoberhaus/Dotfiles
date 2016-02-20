@@ -65,7 +65,8 @@ fi
 
 # Go Path
 export PATH=$PATH:/usr/local/go/bin
-
+export GOPATH=~/go
+export GO15VENDOREXPERIMENT=1
 # Custom Prompt
 source ~/.git-prompt.sh
 if [[ "$TERM" =~ 256color ]]; then
@@ -74,3 +75,7 @@ fi
 
 # gruvbox colors
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+# Python virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
